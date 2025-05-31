@@ -10,7 +10,8 @@ public class IrregularPolygon {
 
     // constructor
     public IrregularPolygon() {}
-
+    
+    //public methods
     public void add(Point2D.Double aPoint)
     {
         myPolygon.add(aPoint);
@@ -27,10 +28,12 @@ public class IrregularPolygon {
 
     public double area() {
         double area = 0;
+        //adding portion
         for(int i = 0; i < myPolygon.size()-1; i++) {
             area += myPolygon.get(i).getX() * myPolygon.get(i+1).getY();
         }
         area += myPolygon.get(myPolygon.size()-1).getX() * myPoygon.get(0).getY();
+        //subtracting portion
         for(int i = 0; i < myPolygon.size()-1; i++) {
             area -= myPolygon.get(i).getY() * myPolygon.get(i+1).getX();
         }
