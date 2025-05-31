@@ -11,7 +11,6 @@ public class IrregularPolygon {
     // constructor
     public IrregularPolygon() {}
 
-    // public methods
     public void add(Point2D.Double aPoint)
     {
         myPolygon.add(aPoint);
@@ -22,7 +21,7 @@ public class IrregularPolygon {
         for(int i = 0; i < myPolygon.size()-1; i++) {
             perim += myPolygon.get(i).distance(myPolygon.get(i+1));
         }
-        permin += myPolygon.get(myPolygon.size()-1).distance(myPolygon.get(0));
+        permin += myPolygon.get(myPolygon.size()-1).distance(myPolygon.get(0));//last line
         return perim;
     }
 
