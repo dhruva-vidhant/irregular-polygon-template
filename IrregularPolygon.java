@@ -22,7 +22,7 @@ public class IrregularPolygon {
         for(int i = 0; i < myPolygon.size()-1; i++) {
             perim += myPolygon.get(i).distance(myPolygon.get(i+1));
         }
-        permin += myPolygon.get(myPolygon.size()-1).distance(myPolygon.get(0));//last line
+        perim += myPolygon.get(myPolygon.size()-1).distance(myPolygon.get(0));//last line
         return perim;
     }
 
@@ -32,13 +32,13 @@ public class IrregularPolygon {
         for(int i = 0; i < myPolygon.size()-1; i++) {
             area += myPolygon.get(i).getX() * myPolygon.get(i+1).getY();
         }
-        area += myPolygon.get(myPolygon.size()-1).getX() * myPoygon.get(0).getY();
+        area += myPolygon.get(myPolygon.size()-1).getX() * myPolygon.get(0).getY();
         //subtracting portion
         for(int i = 0; i < myPolygon.size()-1; i++) {
             area -= myPolygon.get(i).getY() * myPolygon.get(i+1).getX();
         }
-        area -= myPolygon.get(myPolygon.size()-1).getY() * myPoygon.get(0).getX();
-        return area;
+        area -= myPolygon.get(myPolygon.size()-1).getY() * myPolygon.get(0).getX();
+        return Math.abs(area/2);
     }
 
     public void draw()
